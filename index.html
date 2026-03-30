@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Магазин с корзиной и фильтром</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>Магазин</h1>
+
+  <div class="layout">
+    <!-- Каталог -->
+    <section class="catalog">
+      <h2>Каталог товаров</h2>
+
+      <!-- Фильтры -->
+      <div class="filters">
+        <div>
+          <label for="searchInput">Поиск по названию:</label>
+          <input type="text" id="searchInput" placeholder="Например, Яблоко" />
+        </div>
+
+        <div>
+          <label for="categorySelect">Категория:</label>
+          <select id="categorySelect">
+            <option value="all">Все</option>
+            <option value="fruits">Фрукты</option>
+            <option value="vegetables">Овощи</option>
+            <option value="drinks">Напитки</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Список товаров -->
+      <div id="productsContainer" class="products"></div>
+    </section>
+
+    <!-- Корзина -->
+    <section class="cart">
+      <h2>Корзина</h2>
+
+      <div>
+        <button id="payButton" class="btn-pay">Оплатить</button>
+        <button id="clearCartButton" class="btn-clear">Очистить корзину</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+      <div id="cartTotal" class="cart-total">Итого: 0 ₽</div>
+    </section>
+  </div>
+
+  <script src="./code.js"></script>
+</body>
+</html>
